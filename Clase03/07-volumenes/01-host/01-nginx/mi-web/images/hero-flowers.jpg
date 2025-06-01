@@ -1,0 +1,74 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffd93d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8e8e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="petal1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff4757;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="petal2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff8e8e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffa726;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="petal3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd93d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8e8e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo degradado -->
+  <rect width="600" height="400" fill="url(#bg)"/>
+  
+  <!-- Flores tropicales -->
+  <!-- Flor grande central -->
+  <g transform="translate(300,200)">
+    <circle cx="0" cy="0" r="8" fill="#fff700"/>
+    <ellipse cx="0" cy="-25" rx="15" ry="35" fill="url(#petal1)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-25" rx="15" ry="35" fill="url(#petal1)" transform="rotate(45)"/>
+    <ellipse cx="0" cy="-25" rx="15" ry="35" fill="url(#petal2)" transform="rotate(90)"/>
+    <ellipse cx="0" cy="-25" rx="15" ry="35" fill="url(#petal2)" transform="rotate(135)"/>
+    <ellipse cx="0" cy="-25" rx="15" ry="35" fill="url(#petal3)" transform="rotate(180)"/>
+    <ellipse cx="0" cy="-25" rx="15" ry="35" fill="url(#petal3)" transform="rotate(225)"/>
+    <ellipse cx="0" cy="-25" rx="15" ry="35" fill="url(#petal1)" transform="rotate(270)"/>
+    <ellipse cx="0" cy="-25" rx="15" ry="35" fill="url(#petal1)" transform="rotate(315)"/>
+  </g>
+  
+  <!-- Flor pequeña izquierda -->
+  <g transform="translate(150,120)">
+    <circle cx="0" cy="0" r="5" fill="#fff700"/>
+    <ellipse cx="0" cy="-15" rx="8" ry="20" fill="url(#petal2)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-15" rx="8" ry="20" fill="url(#petal3)" transform="rotate(60)"/>
+    <ellipse cx="0" cy="-15" rx="8" ry="20" fill="url(#petal1)" transform="rotate(120)"/>
+    <ellipse cx="0" cy="-15" rx="8" ry="20" fill="url(#petal2)" transform="rotate(180)"/>
+    <ellipse cx="0" cy="-15" rx="8" ry="20" fill="url(#petal3)" transform="rotate(240)"/>
+    <ellipse cx="0" cy="-15" rx="8" ry="20" fill="url(#petal1)" transform="rotate(300)"/>
+  </g>
+  
+  <!-- Flor pequeña derecha -->
+  <g transform="translate(450,280)">
+    <circle cx="0" cy="0" r="5" fill="#fff700"/>
+    <ellipse cx="0" cy="-15" rx="8" ry="20" fill="url(#petal3)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-15" rx="8" ry="20" fill="url(#petal1)" transform="rotate(60)"/>
+    <ellipse cx="0" cy="-15" rx="8" ry="20" fill="url(#petal2)" transform="rotate(120)"/>
+    <ellipse cx="0" cy="-15" rx="8" ry="20" fill="url(#petal3)" transform="rotate(180)"/>
+    <ellipse cx="0" cy="-15" rx="8" ry="20" fill="url(#petal1)" transform="rotate(240)"/>
+    <ellipse cx="0" cy="-15" rx="8" ry="20" fill="url(#petal2)" transform="rotate(300)"/>
+  </g>
+  
+  <!-- Hojas decorativas -->
+  <ellipse cx="100" cy="300" rx="20" ry="60" fill="#2ed573" transform="rotate(-30 100 300)"/>
+  <ellipse cx="500" cy="100" rx="15" ry="45" fill="#7bed9f" transform="rotate(45 500 100)"/>
+  <ellipse cx="80" cy="80" rx="12" ry="35" fill="#2ed573" transform="rotate(60 80 80)"/>
+  <ellipse cx="520" cy="320" rx="18" ry="50" fill="#7bed9f" transform="rotate(-45 520 320)"/>
+  
+  <!-- Partículas brillantes -->
+  <circle cx="200" cy="80" r="3" fill="#fff700" opacity="0.8"/>
+  <circle cx="380" cy="60" r="2" fill="#ffffff" opacity="0.9"/>
+  <circle cx="150" cy="350" r="2.5" fill="#fff700" opacity="0.7"/>
+  <circle cx="480" cy="350" r="2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="80" cy="200" r="2" fill="#fff700" opacity="0.6"/>
+  <circle cx="550" cy="180" r="3" fill="#ffffff" opacity="0.9"/>
+</svg>

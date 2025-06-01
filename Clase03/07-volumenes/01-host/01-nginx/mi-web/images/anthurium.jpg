@@ -1,0 +1,80 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="anthuriumBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00b894;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#55a3ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="anthuriumRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#c0392b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a93226;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="anthuriumHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff7675;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e74c3c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="spadix" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f39c12;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="400" height="300" fill="url(#anthuriumBg)"/>
+  
+  <!-- Anturio principal -->
+  <g transform="translate(200,150)">
+    <!-- Tallo -->
+    <rect x="-3" y="30" width="6" height="90" fill="#27ae60"/>
+    
+    <!-- Hoja en forma de corazón (característica del anturio) -->
+    <path d="M 0,-60 Q -40,-40 -50,0 Q -40,30 0,20 Q 40,30 50,0 Q 40,-40 0,-60 Z" fill="url(#anthuriumRed)"/>
+    
+    <!-- Brillo en la hoja (efecto ceroso característico) -->
+    <path d="M 0,-55 Q -35,-35 -42,0 Q -30,20 -5,10 Q 10,15 15,0 Q 10,-30 0,-55 Z" fill="url(#anthuriumHighlight)" opacity="0.6"/>
+    
+    <!-- Espádice (la estructura central amarilla) -->
+    <ellipse cx="5" cy="-15" rx="3" ry="25" fill="url(#spadix)" transform="rotate(15)"/>
+    
+    <!-- Textura en el espádice -->
+    <rect x="3" y="-35" width="1" height="4" fill="#e67e22" transform="rotate(15)"/>
+    <rect x="3" y="-25" width="1" height="4" fill="#e67e22" transform="rotate(15)"/>
+    <rect x="3" y="-15" width="1" height="4" fill="#e67e22" transform="rotate(15)"/>
+    <rect x="3" y="-5" width="1" height="4" fill="#e67e22" transform="rotate(15)"/>
+    <rect x="3" y="5" width="1" height="4" fill="#e67e22" transform="rotate(15)"/>
+  </g>
+  
+  <!-- Anturio secundario -->
+  <g transform="translate(320,100) scale(0.7) rotate(25)">
+    <rect x="-3" y="30" width="6" height="70" fill="#27ae60"/>
+    <path d="M 0,-60 Q -40,-40 -50,0 Q -40,30 0,20 Q 40,30 50,0 Q 40,-40 0,-60 Z" fill="url(#anthuriumRed)"/>
+    <path d="M 0,-55 Q -35,-35 -42,0 Q -30,20 -5,10 Q 10,15 15,0 Q 10,-30 0,-55 Z" fill="url(#anthuriumHighlight)" opacity="0.5"/>
+    <ellipse cx="5" cy="-15" rx="3" ry="25" fill="url(#spadix)" transform="rotate(15)"/>
+  </g>
+  
+  <!-- Hojas verdes de fondo -->
+  <g transform="translate(100,180)">
+    <path d="M 0,-40 Q -25,-30 -35,0 Q -25,25 0,20 Q 25,25 35,0 Q 25,-30 0,-40 Z" fill="#2e7d32"/>
+    <path d="M 0,-35 Q -20,-25 -28,0 Q -20,20 0,15 Q 20,20 28,0 Q 20,-25 0,-35 Z" fill="#4caf50"/>
+  </g>
+  
+  <g transform="translate(280,200) rotate(-20)">
+    <path d="M 0,-35 Q -20,-25 -28,0 Q -20,18 0,15 Q 20,18 28,0 Q 20,-25 0,-35 Z" fill="#2e7d32"/>
+    <path d="M 0,-30 Q -15,-20 -22,0 Q -15,15 0,12 Q 15,15 22,0 Q 15,-20 0,-30 Z" fill="#4caf50"/>
+  </g>
+  
+  <!-- Botón floral pequeño -->
+  <g transform="translate(80,120) scale(0.4)">
+    <path d="M 0,-60 Q -40,-40 -50,0 Q -40,30 0,20 Q 40,30 50,0 Q 40,-40 0,-60 Z" fill="#ff7675"/>
+    <ellipse cx="5" cy="-15" rx="3" ry="25" fill="#fff700" transform="rotate(15)"/>
+  </g>
+  
+  <!-- Efectos de luz -->
+  <circle cx="150" cy="80" r="3" fill="#ffffff" opacity="0.7"/>
+  <circle cx="300" cy="250" r="2" fill="#fff700" opacity="0.8"/>
+  <circle cx="350" cy="150" r="2" fill="#ffffff" opacity="0.6"/>
+  
+  <!-- Sombras -->
+  <ellipse cx="200" cy="260" rx="40" ry="8" fill="#000000" opacity="0.1"/>
+  <ellipse cx="320" cy="200" rx="25" ry="6" fill="#000000" opacity="0.1"/>
+</svg>
