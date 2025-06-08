@@ -1,0 +1,80 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="birdBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#74b9ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0984e3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="birdOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffa726;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8f00;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="birdBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5c6bc0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3f51b5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="birdPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9c27b0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7b1fa2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="400" height="300" fill="url(#birdBg)"/>
+  
+  <!-- Ave del Paraíso principal -->
+  <g transform="translate(200,150)">
+    <!-- Tallo principal -->
+    <rect x="-3" y="20" width="6" height="80" fill="#2e7d32"/>
+    
+    <!-- Sépalo (estructura que sostiene la flor) -->
+    <path d="M -40,-20 L 40,-20 L 30,-40 L -30,-40 Z" fill="#ff8f00"/>
+    
+    <!-- Pétalos naranjas (parte principal) -->
+    <path d="M -30,-40 Q -50,-60 -40,-80 Q -20,-70 -10,-50" fill="url(#birdOrange)"/>
+    <path d="M -10,-40 Q -20,-65 -5,-80 Q 10,-70 15,-50" fill="url(#birdOrange)"/>
+    <path d="M 15,-40 Q 10,-65 25,-80 Q 40,-70 35,-50" fill="url(#birdOrange)"/>
+    
+    <!-- Pétalos azules (la "cresta" del ave) -->
+    <path d="M -35,-80 Q -45,-100 -25,-110 Q -15,-95 -20,-80" fill="url(#birdBlue)"/>
+    <path d="M -20,-80 Q -25,-105 -5,-115 Q 5,-100 0,-80" fill="url(#birdBlue)"/>
+    <path d="M 0,-80 Q -5,-105 15,-115 Q 25,-100 20,-80" fill="url(#birdBlue)"/>
+    <path d="M 20,-80 Q 15,-105 35,-115 Q 45,-100 40,-80" fill="url(#birdPurple)"/>
+    <path d="M 40,-80 Q 35,-105 55,-115 Q 65,-100 60,-80" fill="url(#birdPurple)"/>
+    
+    <!-- Estambre central -->
+    <rect x="-1" y="-50" width="2" height="30" fill="#1565c0"/>
+    <circle cx="0" cy="-50" r="3" fill="#fff700"/>
+  </g>
+  
+  <!-- Ave del Paraíso secundaria -->
+  <g transform="translate(120,100) scale(0.7) rotate(-15)">
+    <rect x="-3" y="20" width="6" height="60" fill="#2e7d32"/>
+    <path d="M -40,-20 L 40,-20 L 30,-40 L -30,-40 Z" fill="#ff8f00"/>
+    <path d="M -30,-40 Q -50,-60 -40,-80 Q -20,-70 -10,-50" fill="url(#birdOrange)"/>
+    <path d="M -10,-40 Q -20,-65 -5,-80 Q 10,-70 15,-50" fill="url(#birdOrange)"/>
+    <path d="M -35,-80 Q -45,-100 -25,-110 Q -15,-95 -20,-80" fill="url(#birdBlue)"/>
+    <path d="M -20,-80 Q -25,-105 -5,-115 Q 5,-100 0,-80" fill="url(#birdBlue)"/>
+    <path d="M 0,-80 Q -5,-105 15,-115 Q 25,-100 20,-80" fill="url(#birdPurple)"/>
+  </g>
+  
+  <!-- Hojas grandes estilizadas -->
+  <g transform="translate(300,180)">
+    <ellipse cx="0" cy="0" rx="15" ry="60" fill="#2e7d32" transform="rotate(20)"/>
+    <ellipse cx="0" cy="0" rx="10" ry="50" fill="#4caf50" transform="rotate(20)"/>
+    <path d="M -8,-40 Q 0,-50 8,-40 L 0,40 Z" fill="#66bb6a" transform="rotate(20)"/>
+  </g>
+  
+  <g transform="translate(80,200)">
+    <ellipse cx="0" cy="0" rx="12" ry="50" fill="#2e7d32" transform="rotate(-25)"/>
+    <ellipse cx="0" cy="0" rx="8" ry="40" fill="#4caf50" transform="rotate(-25)"/>
+  </g>
+  
+  <!-- Elementos decorativos tropicales -->
+  <circle cx="350" cy="50" r="3" fill="#fff700" opacity="0.8"/>
+  <circle cx="50" cy="60" r="2" fill="#ffffff" opacity="0.9"/>
+  <circle cx="320" cy="250" r="2" fill="#ffa726" opacity="0.7"/>
+  
+  <!-- Sombras suaves -->
+  <ellipse cx="200" cy="250" rx="50" ry="10" fill="#000000" opacity="0.1"/>
+  <ellipse cx="120" cy="180" rx="30" ry="8" fill="#000000" opacity="0.1"/>
+</svg>

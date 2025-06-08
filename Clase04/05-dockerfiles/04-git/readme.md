@@ -1,0 +1,3 @@
+- usen alpine/git
+- clone un repositorio público
+- crear un carpeta y vincularla como un volumen host y ahí deben quedar el repositorio clonado

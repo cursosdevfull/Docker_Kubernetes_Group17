@@ -1,0 +1,64 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="orchidBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e17055;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fdcb6e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orchidPetal1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a29bfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6c5ce7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orchidPetal2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fd79a8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e84393;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orchidCenter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffa726;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="400" height="300" fill="url(#orchidBg)"/>
+  
+  <!-- Orquídea principal -->
+  <g transform="translate(200,150)">
+    <!-- Pétalos superiores -->
+    <ellipse cx="0" cy="-40" rx="25" ry="45" fill="url(#orchidPetal1)" transform="rotate(-15)"/>
+    <ellipse cx="35" cy="-20" rx="20" ry="40" fill="url(#orchidPetal1)" transform="rotate(30)"/>
+    <ellipse cx="-35" cy="-20" rx="20" ry="40" fill="url(#orchidPetal1)" transform="rotate(-30)"/>
+    
+    <!-- Pétalos laterales -->
+    <ellipse cx="45" cy="10" rx="15" ry="35" fill="url(#orchidPetal2)" transform="rotate(60)"/>
+    <ellipse cx="-45" cy="10" rx="15" ry="35" fill="url(#orchidPetal2)" transform="rotate(-60)"/>
+    
+    <!-- Labelo (pétalo inferior característico) -->
+    <path d="M -30,20 Q 0,60 30,20 Q 0,40 -30,20" fill="url(#orchidPetal2)"/>
+    <path d="M -20,25 Q 0,50 20,25 Q 0,35 -20,25" fill="url(#orchidCenter)"/>
+    
+    <!-- Centro de la flor -->
+    <ellipse cx="0" cy="0" rx="8" ry="12" fill="url(#orchidCenter)"/>
+    <circle cx="0" cy="-5" r="3" fill="#ffffff"/>
+  </g>
+  
+  <!-- Orquídea secundaria -->
+  <g transform="translate(120,80) scale(0.7)">
+    <ellipse cx="0" cy="-40" rx="25" ry="45" fill="url(#orchidPetal2)" transform="rotate(-15)"/>
+    <ellipse cx="35" cy="-20" rx="20" ry="40" fill="url(#orchidPetal2)" transform="rotate(30)"/>
+    <ellipse cx="-35" cy="-20" rx="20" ry="40" fill="url(#orchidPetal2)" transform="rotate(-30)"/>
+    <ellipse cx="45" cy="10" rx="15" ry="35" fill="url(#orchidPetal1)" transform="rotate(60)"/>
+    <ellipse cx="-45" cy="10" rx="15" ry="35" fill="url(#orchidPetal1)" transform="rotate(-60)"/>
+    <path d="M -30,20 Q 0,60 30,20 Q 0,40 -30,20" fill="url(#orchidPetal1)"/>
+    <ellipse cx="0" cy="0" rx="8" ry="12" fill="url(#orchidCenter)"/>
+  </g>
+  
+  <!-- Tallo y hojas -->
+  <rect x="195" y="190" width="10" height="80" fill="#2ed573"/>
+  <ellipse cx="170" y="230" rx="12" ry="40" fill="#27ae60" transform="rotate(-30 170 230)"/>
+  <ellipse cx="230" y="240" rx="10" ry="35" fill="#27ae60" transform="rotate(20 230 240)"/>
+  
+  <!-- Efectos de luz -->
+  <circle cx="150" cy="50" r="4" fill="#ffffff" opacity="0.6"/>
+  <circle cx="280" cy="80" r="3" fill="#fff700" opacity="0.7"/>
+  <circle cx="320" cy="200" r="2" fill="#ffffff" opacity="0.8"/>
+</svg>
