@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-nginx
+  labels:
+    env: dev
+    app: frontend
+spec:
+  containers:
+    - name: web
+      image: nginx:alpine    

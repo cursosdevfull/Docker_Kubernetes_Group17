@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rs-server-web
+  labels:
+    app: frontend
+    env: dev
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: frontend
+      env: dev
+  template:
+    metadata:
+      labels:
+        app: frontend
+        env: dev
+    spec:
+      containers:
+        - name: container01
+          image: python:3.7-alpine
+          command: [
+            "sh",
+            "-c",
+            "echo 'página desde python' > index.html && python -m http.server 8080"
+          ]      

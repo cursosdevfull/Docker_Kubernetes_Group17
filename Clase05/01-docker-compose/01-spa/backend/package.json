@@ -1,0 +1,29 @@
+{
+    "name": "user-api",
+    "version": "1.0.0",
+    "description": "API REST para CRUD de usuarios con Express y MySQL",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node src/index.js",
+        "dev": "nodemon src/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "express",
+        "mysql",
+        "crud",
+        "api",
+        "nodejs"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.18.2",
+        "mysql2": "^3.6.5",
+        "cors": "^2.8.5",
+        "dotenv": "^16.3.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.2"
+    }
+}

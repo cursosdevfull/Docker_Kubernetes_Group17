@@ -1,0 +1,48 @@
+services:
+  frontend:
+    image: gcr.io/docker07/frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - BACKEND1_URL=http://localhost:3001
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  backend1:
+    image: gcr.io/docker07/backend1
+    build:
+      context: ./backend1
+      dockerfile: Dockerfile
+    container_name: backend1
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - BACKEND2_URL=http://backend2:3002
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  backend2:
+    image: gcr.io/docker07/backend2
+    build:
+      context: ./backend2
+      dockerfile: Dockerfile
+    container_name: backend2
+    environment:
+      - PORT=3002
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3002/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

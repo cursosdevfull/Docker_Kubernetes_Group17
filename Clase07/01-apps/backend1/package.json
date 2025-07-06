@@ -1,0 +1,25 @@
+{
+    "name": "backend1",
+    "version": "1.0.0",
+    "description": "Backend 1 - Products API with Backend2 integration",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "cors": "^2.8.5",
+        "node-fetch": "^2.7.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.2"
+    },
+    "keywords": [
+        "nodejs",
+        "express",
+        "api"
+    ],
+    "author": "",
+    "license": "MIT"
+}

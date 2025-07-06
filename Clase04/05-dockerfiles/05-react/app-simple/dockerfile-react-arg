@@ -1,0 +1,17 @@
+FROM node:22-alpine AS base
+ARG DIRECTORY
+WORKDIR /app
+
+FROM base AS deps
+COPY ${DIRECTORY}/package*.json .
+RUN npm ci --omit=dev
+
+FROM base AS builder
+COPY ${DIRECTORY}/. .
+#RUN npm ci && npm run build
+
+FROM nginx:alpine AS production
+COPY --from=deps /app/node_modules /usr/share/nginx/html/node_modules
+COPY --from=builder /app/dist /usr/share/nginx/html
+CMD ["nginx", "-g", "daemon off;"]
+

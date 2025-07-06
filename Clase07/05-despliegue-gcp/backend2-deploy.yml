@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend2-deploy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      env: dev
+      app: backend2
+  template:
+    metadata:
+      labels:
+        env: dev
+        app: backend2
+    spec:
+      containers:
+        - name: backend2
+          image: docker17.azurecr.io/backend2
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3002
+          env:
+            - name: PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: cm-parameters
+                  key: BACKEND2_PORT
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3002
+            initialDelaySeconds: 3
+            periodSeconds: 3
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 3002
+            initialDelaySeconds: 3
+            periodSeconds: 3            

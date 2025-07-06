@@ -1,0 +1,103 @@
+/* Custom Styles */
+body {
+  background-color: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.display-4 {
+  color: #495057;
+  font-weight: 300;
+}
+
+.card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: none;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card {
+  height: 100%;
+}
+
+.product-image {
+  height: 200px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.stock-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.source-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.alert {
+  border-radius: 10px;
+}
+
+.modal-content {
+  border-radius: 15px;
+  border: none;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Product Categories Colors */
+.category-electronics {
+  border-left: 5px solid #007bff;
+}
+
+.category-photography {
+  border-left: 5px solid #6f42c1;
+}
+
+.category-default {
+  border-left: 5px solid #6c757d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .product-image {
+    height: 150px;
+    font-size: 2rem;
+  }
+}

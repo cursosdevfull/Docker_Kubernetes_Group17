@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cm-parameters
+data:
+  FRONTEND_PORT: "3000"
+  BACKEND1_PORT: "3001"
+  BACKEND1_URL: "/products"
+  BACKEND2_PORT: "3002"
+  BACKEND2_URL: http://backend2-svc

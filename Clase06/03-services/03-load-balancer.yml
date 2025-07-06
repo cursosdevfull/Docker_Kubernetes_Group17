@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-load-balancer-ip
+spec:
+  type: LoadBlancer
+  selector: 
+    app: frontend
+    env: dev
+  ports:
+    - port: 3000
+      targetPort: 8080
+      protocol: TCP
+      name: port-web
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rs-server-web
+  labels:
+    app: frontend
+    env: dev
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: frontend
+      env: dev
+  template:
+    metadata:
+      labels:
+        app: frontend
+        env: dev
+    spec:
+      containers:
+        - name: container01
+          image: python:3.7-alpine
+          command: [
+            "sh",
+            "-c",
+            "echo 'página desde python' > index.html && python -m http.server 8080"
+          ]      

@@ -1,0 +1,83 @@
+services:
+  mysql-server:
+    image: mysql:8
+    container_name: mysql-server
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: course_docker
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user_password
+    ports:
+      - "3320:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - course-network
+    restart: always
+    volumes:
+      - vol-mysql-course-docker:/var/lib/mysql
+
+  mysql-client:
+    image: phpmyadmin:5.2.2
+    container_name: mysql-client
+    environment:
+      PMA_ARBITRARY: 1
+    ports:
+      - "8080:80"
+    depends_on:
+      mysql-server:
+        condition: service_healthy
+    networks:
+      - course-network   
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: dockerfile
+    container_name: backend
+    ports:
+      - "9000:3000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 10s
+      timeout: 10s
+      retries: 3      
+    depends_on:
+      mysql-server:
+        condition: service_healthy
+    networks:
+      - course-network
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: dockerfile
+    container_name: frontend
+    ports:
+      - "9010:80"
+    environment:
+      API_ENDPOINT: http://localhost:9000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 10s
+      timeout: 10s
+      retries: 3      
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - course-network
+    restart: always
+
+volumes:
+  vol-mysql-course-docker:
+    name: vol-mysql-course-docker
+
+networks:
+  course-network:
+    driver: bridge
+    name: course-network
