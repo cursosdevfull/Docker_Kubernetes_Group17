@@ -27,7 +27,7 @@ gcloud auth configure-docker
 ### Habilitar el control de acceso inicial
 
 ```
-gcloud projects get-iam-policy docker07 --flatten="bindings[].members" --format='table(bindings.role)' --filter="bindings.members:service-845412221130@containerregistry.iam.gserviceaccount.com"
+gcloud projects add-iam-policy-binding docker07 --member='serviceAccount:service-61410563976@gcp-sa-artifactregistry.iam.gserviceaccount.com' --role='roles/storage.objectViewer'
 ```
 
 ### Dominios posibles para los repositorios de imágenes
@@ -67,3 +67,7 @@ docker compose -f compose-gcp.yaml push
 ```
 gcloud container clusters get-credentials cursodocker15 --region us-central1 --project docker07
 ```
+
+
+
+gcloud auth configure-docker us-central1-docker.pkg.dev

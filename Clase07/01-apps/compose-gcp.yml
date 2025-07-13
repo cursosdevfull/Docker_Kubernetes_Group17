@@ -1,6 +1,6 @@
 services:
   frontend:
-    image: gcr.io/docker07/frontend
+    image: us-central1-docker.pkg.dev/docker07/frontend/frontend
     build:
       context: ./frontend
       dockerfile: Dockerfile
@@ -17,7 +17,7 @@ services:
       retries: 3
 
   backend1:
-    image: gcr.io/docker07/backend1
+    image: us-central1-docker.pkg.dev/docker07/backend1/backend1
     build:
       context: ./backend1
       dockerfile: Dockerfile
@@ -34,7 +34,7 @@ services:
       retries: 3
 
   backend2:
-    image: gcr.io/docker07/backend2
+    image: us-central1-docker.pkg.dev/docker07/backend2/backend2
     build:
       context: ./backend2
       dockerfile: Dockerfile

@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: backend1-deploy
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       env: dev
@@ -16,8 +16,13 @@ spec:
     spec:
       containers:
         - name: backend1
-          image: docker17.azurecr.io/backend1
+          image: us-central1-docker.pkg.dev/docker07/backend1/backend1
           imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: "1"
+            requests:
+              cpu: "0.5"
           ports:
             - containerPort: 3001
           env:

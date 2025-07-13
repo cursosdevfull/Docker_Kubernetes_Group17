@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: frontend-deploy
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       env: dev
@@ -16,8 +16,13 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: docker17.azurecr.io/frontend
+          image: us-central1-docker.pkg.dev/docker07/frontend/frontend
           imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: "1"
+            requests:
+              cpu: "0.5"
           ports:
             - containerPort: 3000
           env:
