@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 OPR/119.0.0.0" version="28.0.4">
+  <diagram name="1" id="_D66s8hl_uAKLzHjtbDU">
+    <mxGraphModel dx="1057" dy="467" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F1FAEE" math="0" shadow="1">
+      <root>
+        <mxCell id="HOphWXerJYuGj8K8BdVv-0" />
+        <mxCell id="HOphWXerJYuGj8K8BdVv-1" parent="HOphWXerJYuGj8K8BdVv-0" />
+        <mxCell id="HOphWXerJYuGj8K8BdVv-2" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;rounded=0;sketch=0;strokeColor=#457B9D;fillColor=#A8DADC;fontColor=#1D3557;image=https://cursos-dev.com/assets/images/logo-horizontal.png;" parent="HOphWXerJYuGj8K8BdVv-1" vertex="1">
+          <mxGeometry width="282.99" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PVK0TvK-mryRj15-IAMU-0" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="HOphWXerJYuGj8K8BdVv-1" vertex="1">
+          <mxGeometry x="470" y="170" width="300" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="PVK0TvK-mryRj15-IAMU-1" value="CLUSTER" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="HOphWXerJYuGj8K8BdVv-1" vertex="1">
+          <mxGeometry x="470" y="140" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PVK0TvK-mryRj15-IAMU-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="HOphWXerJYuGj8K8BdVv-1" source="PVK0TvK-mryRj15-IAMU-2" target="PVK0TvK-mryRj15-IAMU-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PVK0TvK-mryRj15-IAMU-2" value="LOAD BALANCER" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#8C4FFF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.application_load_balancer;" parent="HOphWXerJYuGj8K8BdVv-1" vertex="1">
+          <mxGeometry x="70" y="330" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="PVK0TvK-mryRj15-IAMU-3" value="INGRESS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="HOphWXerJYuGj8K8BdVv-1" vertex="1">
+          <mxGeometry x="490" y="200" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="PVK0TvK-mryRj15-IAMU-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="HOphWXerJYuGj8K8BdVv-1" source="PVK0TvK-mryRj15-IAMU-4" target="PVK0TvK-mryRj15-IAMU-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PVK0TvK-mryRj15-IAMU-4" value="TARGET GROUP" style="rounded=0;whiteSpace=wrap;html=1;" parent="HOphWXerJYuGj8K8BdVv-1" vertex="1">
+          <mxGeometry x="180" y="450" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PVK0TvK-mryRj15-IAMU-6" value="SERVICE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="HOphWXerJYuGj8K8BdVv-1" vertex="1">
+          <mxGeometry x="630" y="330" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="PVK0TvK-mryRj15-IAMU-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="HOphWXerJYuGj8K8BdVv-1" source="PVK0TvK-mryRj15-IAMU-8" target="PVK0TvK-mryRj15-IAMU-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PVK0TvK-mryRj15-IAMU-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="HOphWXerJYuGj8K8BdVv-1" source="PVK0TvK-mryRj15-IAMU-8" target="PVK0TvK-mryRj15-IAMU-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PVK0TvK-mryRj15-IAMU-8" value="INGRESS CONTROLLER" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="HOphWXerJYuGj8K8BdVv-1" vertex="1">
+          <mxGeometry x="490" y="450" width="120" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
